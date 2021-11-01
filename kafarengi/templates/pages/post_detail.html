@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+{% load static %}
+{% block content %}
+<!-- 
+<div class="p-2 mh-100 w-75 ">
+   {{ post.body | safe }}
+</div>
+<div class="float-lg-start w-10 border">
+   deneme
+</div>
+-->
+
+<div class="row">
+   <div class="col-md-9">
+      {{ post.body | safe }}
+   </div>
+   <div class="col-md-1 text-align" style="background-color: #427676;">
+     
+   </div>
+</div>
+{% endblock %} 

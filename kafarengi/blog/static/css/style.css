@@ -1,0 +1,37 @@
+.navbar-nav .nav-item:hover .nav-link {
+    color: rgb(31, 116, 42);
+}
+a:link {
+    text-decoration: none;
+  }
+  
+a:visited {
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: none;
+  }
+  
+a:active {
+    text-decoration: none;
+  }
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 150px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #365946;
+    color: white;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 6px;
+  }
+  
+#myBtn:hover {
+    background-color: #A30000;
+  }

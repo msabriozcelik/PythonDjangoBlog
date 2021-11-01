@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %} 
+{% for post in object_list %}
+    {% if post.imagedesc == 'tarih.jpg' %}
+                <div  class="row" style="margin-top:20px;">
+                    <div class="col-md-11">
+                        <div class="card-mb-3">
+                            <div class="card mb-3">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="{% static post.get_image_path %}">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <div class="card-title"><h1><a href='{% url "post_detail" post.pk %}' class="link-info">{{post.title}}</a></h1></div>
+                                            <p class="card-title maxlength='10'">{{post.description |safe}}</p>
+                                            <p class="card-text">   
+                                                <small class="text-muted"><a href='{% url "post_detail" post.pk %}' class="link-info" style="text-decoration: underline;">Devamını oku</a></small>
+                                            </p>
+                                        </div>
+                                        <div class="div">
+                                            <small class="text-muted font-italic float-right" style="margin-top: 80px; margin-right: 35px;">{{post.date_created}}</small>
+                                        </div>                                  
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+    {% else %}            
+    {% endif %}    
+{% endfor %} 
+{% endblock %}
+</body>
